@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MITA.Homework3", "MITA.Homework3\MITA.Homework3.csproj", "{97C87172-2D27-4DC3-9A58-E5E6E3A9930C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{04F114F2-8632-457A-91D2-1EDB9D68BA40}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97C87172-2D27-4DC3-9A58-E5E6E3A9930C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C87172-2D27-4DC3-9A58-E5E6E3A9930C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C87172-2D27-4DC3-9A58-E5E6E3A9930C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C87172-2D27-4DC3-9A58-E5E6E3A9930C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04F114F2-8632-457A-91D2-1EDB9D68BA40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04F114F2-8632-457A-91D2-1EDB9D68BA40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04F114F2-8632-457A-91D2-1EDB9D68BA40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04F114F2-8632-457A-91D2-1EDB9D68BA40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
