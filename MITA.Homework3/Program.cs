@@ -11,47 +11,52 @@ namespace MITA.Homework3
     {
         static void Main(string[] args)
         {
-            Numbertron numbertron = new Numbertron();
-            Jay jay = new Jay();
-            SilentBob silentBob = new SilentBob();
+            while (true)
+            {
+                Console.WriteLine("Введите количество чисел для числотрона");
+                Numbertron numbertron = new Numbertron();
+                Jay jay = new Jay();
+                SilentBob silentBob = new SilentBob();
 
-            numbertron.NewNumber += silentBob.FetchNewNumber;
-            numbertron.NewNumber += jay.FetchNewNumber;
+                numbertron.NewNumber += silentBob.FetchNewNumber;
+                numbertron.NewNumber += jay.FetchNewNumber;
 
-            int count;
+                
 
-           Console.WriteLine("Введите количество чисел для числотрона");
-            link1:
                 try
-                {
-                    count = Convert.ToInt32(Console.ReadLine());
-                    if (count < 0 || count == 0)
+                {            
+                    int count = Convert.ToInt32(Console.ReadLine());
+                    if (count > 0)
                     {
-                        Console.WriteLine("Число должно быть больше нуля");
-                        goto link1;
+                        for (int i = 0; i < count; i++)
+                        {
+                            numbertron.Generate();
+                        }
+
+                        if (jay.Score > silentBob.Score)
+                            Console.WriteLine("Jay win");
+                        else if (jay.Score < silentBob.Score)
+                        {
+                            Console.WriteLine("Silent Bob win");
+                        }
+                        else if (jay.Score == silentBob.Score && jay.Score != 0 && silentBob.Score != 0)
+                        {
+                            Console.WriteLine("DRAW");
+                        }
+
                     }
                     else
-                        numbertron.Generate(count);
+                        Console.WriteLine("Число должно быть больше нуля");
                 }
+
                 catch (FormatException)
                 {
                     Console.WriteLine("Некорректный ввод");
-                    goto link1;
+
                 }
-                
-                if (jay.Score > silentBob.Score)
-                    Console.WriteLine("Jay win");
-                else if (jay.Score < silentBob.Score)
-                {
-                    Console.WriteLine("Silent Bob win");
-                }
-                else if (jay.Score == silentBob.Score && jay.Score != 0 && silentBob.Score != 0)
-                {
-                    Console.WriteLine("DRAW");
-                }
-                
+                Console.WriteLine("Нажмите любую клавишу чтобы попробовать еще раз....");
                 Console.ReadKey();
-            
+            } 
         }
     }
 }

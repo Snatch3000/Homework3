@@ -12,16 +12,14 @@ namespace Model
 
         public event MethodNumbertron NewNumber;
 
-        public void Generate(int count)
+        Random rnd = new Random();
+
+        public void Generate()
         {
-            Random rnd = new Random();
-            for (int i = 0; i < count; i++)
-            {
+              
                 int num = rnd.Next();
                 if (NewNumber != null)
-                    NewNumber(num);
-                Console.WriteLine(num);
-            }
+                    NewNumber(num);                        
         }
     }
 }

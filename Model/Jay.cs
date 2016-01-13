@@ -16,7 +16,7 @@ namespace Model
 
         public override void FetchNewNumber(int num)
         {
-            if (Extension.IsEven(num))
+            if (num.IsEven())
             Score++;
         }
     }
